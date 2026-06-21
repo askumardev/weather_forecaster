@@ -66,5 +66,6 @@ group :test do
 end
 
 gem 'httparty'
+gem 'connection_pool', '~> 2.2'
 gem 'redis', '~> 4.8'
 gem 'pry-rails'
