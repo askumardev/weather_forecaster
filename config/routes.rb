@@ -7,4 +7,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  root 'forecasts#new'
+
+  resources :forecasts, only: [:new, :create]
 end
