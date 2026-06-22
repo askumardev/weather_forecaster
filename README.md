@@ -15,6 +15,31 @@ A Ruby on Rails application that accepts an address or postal code, retrieves we
 - Includes automated test coverage using RSpec.
 
 ---
+## Screenshots
+
+### Home Page
+
+![Home Page](screenshots/home_page.png)
+
+### Forecast Using Postal Code
+
+![Postal Code Forecast](screenshots/postal_code_forecast.png)
+
+### Forecast Using Address
+
+![Address Forecast](screenshots/address_forecast.png)
+
+### Cached Response
+
+![Cached Response](screenshots/cache_response.png)
+
+### Invalid Address
+
+![Invalid Address](screenshots/invalid_address.png)
+
+### Test Suite
+
+![RSpec Results](screenshots/rspec_results.png)
 
 ## Requirements
 
