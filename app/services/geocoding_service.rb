@@ -1,4 +1,3 @@
-
 class GeocodingService
   include HTTParty
 
@@ -9,6 +8,8 @@ class GeocodingService
   end
 
   def call
+    return nil unless valid_address?
+
     response = fetch_location
 
     return nil unless valid_response?(response)
@@ -42,7 +43,7 @@ class GeocodingService
 
   def request_headers
     {
-      "User-Agent" => "WeatherApp/1.0"
+      "User-Agent" => "WeatherForecaster/1.0"
     }
   end
 
@@ -66,5 +67,9 @@ class GeocodingService
       address_data["town"] ||
       address_data["village"] ||
       address_data["state_district"]
+  end
+
+  def valid_address?
+    address.match?(/\A\d{5,6}\z/) || address.include?(" ")
   end
 end
