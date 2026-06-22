@@ -1,5 +1,4 @@
 
-
 <h1>Weather Forecast</h1>
 <br>
 <% if flash[:notice] %>
@@ -14,6 +13,7 @@
   <label for="address">Enter an address:</label>
   <input type="text" name="address" id="address" value="<%= @address %>" placeholder="e.g. Bengaluru, India or 560001" size="50">
   <button type="submit">Get Forecast</button>
+  <button type="reset">Clear</button>
 <% end %>
 
 <% if @forecast %>

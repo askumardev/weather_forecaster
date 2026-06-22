@@ -1,4 +1,3 @@
-# app/services/geocoding_service.rb
 
 class GeocodingService
   include HTTParty
