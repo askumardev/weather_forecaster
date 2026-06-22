@@ -107,7 +107,7 @@ ForecastService
      ↓
 GeocodingService
      ↓
-WeatherApiService
+WeatherService
 ```
 
 ---
@@ -137,7 +137,7 @@ Responsible for:
 - Converting an address into coordinates.
 - Extracting city and postal code information.
 
-### WeatherApiService
+### WeatherService
 
 Responsible for:
 
@@ -227,7 +227,7 @@ ForecastService composes multiple services to build the final response.
 Each class has one responsibility:
 
 - GeocodingService → Address lookup.
-- WeatherApiService → Weather retrieval.
+- WeatherService → Weather retrieval.
 - ForecastService → Workflow orchestration and caching.
 
 ### Open/Closed Principle (OCP)
