@@ -22,9 +22,17 @@ A Ruby on Rails application that accepts an address or postal code, retrieves we
 
 ![Home Page](screenshots/1home_page.png)
 
+### Invalid Address
+
+![Invalid Address](screenshots/3invalid_address.png)
+
+### Blank Address
+
+![Invalid Address](screenshots/2blank_response.png)
+
 ### Forecast Using Postal Code
 
-![Postal Code Forecast](screenshots/postal_code_forecast.png)
+![Postal Code Forecast](screenshots/valid_pincode.png)
 
 ### Forecast Using Address
 
@@ -33,14 +41,6 @@ A Ruby on Rails application that accepts an address or postal code, retrieves we
 ### Cached Response
 
 ![Cached Response](screenshots/5valid_cached.png)
-
-### Invalid Address
-
-![Invalid Address](screenshots/3invalid_address.png)
-
-### Blank Address
-
-![Invalid Address](screenshots/2blank_response.png)
 
 ## Requirements
 
