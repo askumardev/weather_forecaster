@@ -15,6 +15,7 @@ A Ruby on Rails application that accepts an address or postal code, retrieves we
 - Includes automated test coverage using RSpec.
 
 ---
+
 ## Screenshots
 
 ### Home Page
@@ -40,7 +41,6 @@ A Ruby on Rails application that accepts an address or postal code, retrieves we
 ### Blank Address
 
 ![Invalid Address](screenshots/2blank_response.png)
-
 
 ## Requirements
 
@@ -256,4 +256,3 @@ External APIs are encapsulated and can be mocked independently during testing.
 - Functionality is prioritized over UI styling.
 
 ---
-
