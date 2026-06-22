@@ -3,10 +3,26 @@ class ForecastsController < ApplicationController
   end
 
   def create
-    if params[:address].blank?
-      flash.now[:notice] = "Please enter an address."
+    if address.blank?
+      flash.now[:alert] = "Please enter an address."
       render :new
+      return
+    end
+    result = GeocodingService.new(address).call
+
+    if result.present?
+      flash[:notice] = "Location found for #{result[:city]}"
+    else
+      flash[:alert] = "Unable to find the provided address."
     end
 
+    redirect_to root_path
+
+  end
+
+  private
+
+  def address
+    params[:address]
   end
 end

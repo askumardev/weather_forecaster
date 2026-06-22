@@ -5,9 +5,11 @@ require_relative '../config/environment'
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require 'rspec/rails'
 require_relative 'spec_helper'
+require "webmock/rspec"
 
 # Load support files
 Dir[Rails.root.join('spec', 'support', '**', '*.rb')].sort.each { |f| require f }
+WebMock.disable_net_connect!(allow_localhost: true)
 
 RSpec.configure do |config|
   config.use_transactional_fixtures = true

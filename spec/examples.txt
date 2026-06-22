@@ -1,4 +1,9 @@
-example_id                                   | status | run_time        |
--------------------------------------------- | ------ | --------------- |
-./spec/helpers/forecasts_helper_spec.rb[1:1] | passed | 0.0357 seconds  |
-./spec/requests/forecasts_spec.rb[1:1:1]     | passed | 0.07206 seconds |
+example_id                                         | status | run_time        |
+-------------------------------------------------- | ------ | --------------- |
+./spec/helpers/forecasts_helper_spec.rb[1:1]       | passed | 0.02931 seconds |
+./spec/requests/forecasts_spec.rb[1:1:1]           | passed | 0.05528 seconds |
+./spec/requests/forecasts_spec.rb[1:2:1:1]         | passed | 0.00571 seconds |
+./spec/requests/forecasts_spec.rb[1:2:2:1]         | passed | 0.00645 seconds |
+./spec/requests/forecasts_spec.rb[1:2:3:1]         | passed | 0.00175 seconds |
+./spec/services/geocoding_service_spec.rb[1:1:1:1] | passed | 0.00672 seconds |
+./spec/services/geocoding_service_spec.rb[1:1:2:1] | passed | 0.00144 seconds |
