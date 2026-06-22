@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+ body { font-family: sans-serif; max-width: 600px; margin: 40px auto; padding: 0 20px; }
+h1 { margin-bottom: 20px; }
+label { display: block; margin-bottom: 8px; font-weight: bold; }
+input[type="text"] { width: 100%; padding: 8px; margin-bottom: 12px; box-sizing: border-box; }
+button { padding: 8px 16px; cursor: pointer; }
+ul { line-height: 1.8; }
+hr { margin: 24px 0; }

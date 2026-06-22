@@ -11,5 +11,7 @@ require 'rails_helper'
 #   end
 # end
 RSpec.describe ForecastsHelper, type: :helper do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it 'is available to helper specs' do
+    expect(helper.class.ancestors).to include(ForecastsHelper)
+  end
 end

@@ -1,4 +1,34 @@
-<div>
-  <h1 class="font-bold text-4xl">Forecasts#new</h1>
-  <p>Find me in app/views/forecasts/new.html.erb</p>
-</div>
+
+
+<h1>Weather Forecast</h1>
+<br>
+<% if flash[:notice] %>
+  <p style="color: red;"><%= flash[:notice] %></p>
+<% end %>
+
+<% if flash[:alert] %>
+  <p style="color: red;"><%= flash[:alert] %></p>
+<% end %>
+
+<%= form_with url: forecasts_path, method: :post, local: true, data: { turbo: false } do %>
+  <label for="address">Enter an address:</label>
+  <input type="text" name="address" id="address" value="<%= @address %>" placeholder="e.g. Bengaluru, India or 560001" size="50">
+  <button type="submit">Get Forecast</button>
+<% end %>
+
+<% if @forecast %>
+  <hr>
+  <h2>Forecast for <%= @address %></h2>
+
+  <% if @forecast[:from_cache] %>
+    <p><em>(served from cache)</em></p>
+  <% else %>
+    <p><em>(freshly fetched)</em></p>
+  <% end %>
+
+  <ul>
+    <li>Current Temp: <%= @forecast[:current_temp] %>&deg;C</li>
+    <li>High: <%= @forecast[:high] %>&deg;C</li>
+    <li>Low: <%= @forecast[:low] %>&deg;C</li>
+  </ul>
+<% end %>
